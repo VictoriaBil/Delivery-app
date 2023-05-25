@@ -1,0 +1,127 @@
+.container {
+  padding: 0 20px;
+  gap: 80px;
+  display: flex;
+}
+.shopBlock {
+  display: flex;
+  width: 250px;
+  height: 450px;
+  border: 3px solid #5075c8;
+  border-radius: 5px;
+  border-collapse: collapse;
+  box-shadow: 10px 10px 10px 0px rgb(108, 108, 108);
+}
+
+.productContainer {
+  display: flex;
+  width: 70%;
+  height: 550px;
+  border: 3px solid #ffed00;
+  border-radius: 5px;
+  border-collapse: collapse;
+  box-shadow: 10px 10px 10px 0px rgb(108, 108, 108);
+  overflow-y: auto;
+}
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border: 2px solid #5075c8;
+  border-radius: 5px;
+  border-collapse: collapse;
+  box-shadow: 5px 5px 5px 0px rgb(108, 108, 108);
+  height: 250px;
+  width: calc((100% - 66px) / 3);
+}
+
+.productImage {
+  display: flex;
+  width: 250px;
+  height: 140px;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productName {
+  margin: 0;
+  margin: 15px 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.productBtn {
+  width: 150px;
+  height: 40px;
+  margin: 5px auto;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #5075c8;
+  font-size: 16px;
+  font-weight: 400;
+  border: 2px solid #5075c8;
+  cursor: pointer;
+}
+
+.productBtn:hover,
+.productBtn:focus {
+  color: #5075c8;
+  background-color: #ffed00;
+  border: 2px solid #5075c8;
+}
+
+.shopList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 20px;
+}
+
+.shopBtn {
+  width: 170px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #5075c8;
+  font-size: 16px;
+  font-weight: 400;
+  border: 2px solid #5075c8;
+  cursor: pointer;
+}
+
+.shopBtnActive {
+  background-color: #ffca28;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.shopBtnActive:hover {
+  background-color: #ffb300;
+}
+
+.shopBtn:hover,
+.shopBtn:focus {
+  color: #5075c8;
+  background-color: #ffed00;
+  border: 2px solid #5075c8;
+}

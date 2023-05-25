@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 50px 0;
+  border: 2px solid #5075c8;
+  border-radius: 5px;
+  border-collapse: collapse;
+  box-shadow: 10px 10px 10px 0px rgb(108, 108, 108);
+}
+
+.item {
+  display: block;
+  width: 250px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.BtnRegister {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  width: 120px;
+  justify-content: center;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 5px;
+  color: white;
+  border-color: #5075c8;
+  background-color: #5075c8;
+  cursor: pointer;
+}
+
+.BtnRegister:hover,
+.BtnRegister:focus {
+  background-color: #ffd700;
+  color: #5075c8;
+}

@@ -1,0 +1,41 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.item {
+  display: block;
+  width: 250px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.item:focus {
+  outline: 1px solid black;
+}
+
+.formBtn {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 120px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border-color: grey;
+  background-color: lightpink;
+  cursor: pointer;
+}
+
+.formBtn:hover,
+.formBtn:focus {
+  background-color: transparent;
+  color: #008080;
+  border: 2px solid #008080;
+}

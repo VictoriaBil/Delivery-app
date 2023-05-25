@@ -1,0 +1,24 @@
+.block {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.navLink {
+  width: 85px;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 900;
+  border: 2px solid #5075c8;
+}
+
+.navLink:hover {
+  color: white;
+  background-color: #5075c8;
+}

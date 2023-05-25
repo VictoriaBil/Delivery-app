@@ -1,0 +1,19 @@
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  padding: 0 20px;
+}
+
+.container {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  color: tomato;
+  font-size: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

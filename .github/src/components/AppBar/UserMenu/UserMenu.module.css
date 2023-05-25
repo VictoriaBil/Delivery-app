@@ -1,0 +1,37 @@
+.BtnLogOut {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  width: 120px;
+  font-weight: 900;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  background-color: #008080;
+  cursor: pointer;
+}
+
+.BtnLogOut:hover {
+  color: #008080;
+  background-color: white;
+  border-color: #008080;
+}
+
+.block {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.welcome {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.userName {
+  color: #008080;
+  font-family: 'Courier New', Courier, monospace;
+}
