@@ -1,11 +1,33 @@
 .container {
   padding: 0 20px;
-  gap: 80px;
-  display: flex;
 }
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    width: 768px;
+    gap: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    width: 1200px;
+    gap: 80px;
+  }
+}
+
 .shopBlock {
   display: flex;
-  width: 250px;
+  max-width: 250px;
   height: 450px;
   border: 3px solid #5075c8;
   border-radius: 5px;
@@ -15,7 +37,7 @@
 
 .productContainer {
   display: flex;
-  width: 70%;
+  max-width: 70%;
   height: 550px;
   border: 3px solid #ffed00;
   border-radius: 5px;
