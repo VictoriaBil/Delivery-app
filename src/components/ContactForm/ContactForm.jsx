@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import css from '../../components/ContactForm/ContactForm.module.css';
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  getLatLng,
+} from 'react-places-autocomplete';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -7,12 +11,24 @@ const ContactForm = () => {
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
 
+  const handleAddressChange = address => {
+    setAddress(address);
+  };
+
+  const handleSelectAddress = selectedAddress => {
+    setAddress(selectedAddress);
+    geocodeByAddress(selectedAddress)
+      .then(results => getLatLng(results[0]))
+      .then(latLng => {
+        console.log('Selected address coordinates:', latLng);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
-
-    // Обработка отправки формы, например, отправка данных на сервер
-
-    // Очистка полей формы после отправки
     setName('');
     setEmail('');
     setPhone('');
@@ -61,13 +77,44 @@ const ContactForm = () => {
         <label htmlFor="address" className={css.contactLabel}>
           Address:
         </label>
-        <input
-          type="text"
-          id="address"
+        <PlacesAutocomplete
           value={address}
-          onChange={e => setAddress(e.target.value)}
-          className={css.contactInput}
-        />
+          onChange={handleAddressChange}
+          onSelect={handleSelectAddress}
+        >
+          {({
+            getInputProps,
+            suggestions,
+            getSuggestionItemProps,
+            loading,
+          }) => (
+            <div>
+              <input
+                {...getInputProps({
+                  placeholder: 'Enter address',
+                  className: css.contactInput,
+                })}
+              />
+              <div>
+                {loading && <div>Loading...</div>}
+                {suggestions.map(suggestion => {
+                  const className = suggestion.active
+                    ? css.suggestionItemActive
+                    : css.suggestionItem;
+                  return (
+                    <div
+                      {...getSuggestionItemProps(suggestion, {
+                        className,
+                      })}
+                    >
+                      {suggestion.description}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </PlacesAutocomplete>
       </div>
       <button type="submit" className={css.contactBtn}>
         Submit
