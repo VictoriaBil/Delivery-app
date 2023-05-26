@@ -1,3 +1,5 @@
+English version
+
 1. Open the application on your computer or laptop using the link
    https://victoriabil.github.io/Delivery-app/.
 2. If you are accessing it for the first time, you need to register.
@@ -14,6 +16,8 @@
 9. At the bottom, you will see the total price and the option to submit the
    order using the "Submit" button.
 
+   Ukrainian version
+
 10. Відкрийте додаток на вашому комп'ютері або ноутбуці за посиланням
     https://victoriabil.github.io/Delivery-app/.
 11. Якщо ви вперше заходите, необхідно зареєструватися.
@@ -29,3 +33,5 @@
     видалити позицію з кошика за допомогою кнопки "Видалити товар".
 18. Унизу ви побачите загальну вартість і можливість оформити замовлення за
     допомогою кнопки "Підтвердити".
+19. Примечание: добавлен код для определения геолокации, но API_KEY
+    неактивирован
